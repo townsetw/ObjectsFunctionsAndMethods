@@ -14,6 +14,7 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
+    lines()
     circle_and_rectangle()
     two_circles()
 
@@ -137,17 +138,17 @@ def circle_and_rectangle():
 
 def lines():
     """
-    -- Constructs a rg.RoseWindow.
+    -- Constructs a rg.RoseWindow. DONE
     -- Constructs and draws on the window two rg.Lines such that:
-          -- They both fit in the window and are easily visible.
-          -- One rg.Line has the default thickness.
-          -- The other rg.Line is thicker (i.e., has a bigger width).
+          -- They both fit in the window and are easily visible. DONE
+          -- One rg.Line has the default thickness. DONE
+          -- The other rg.Line is thicker (i.e., has a bigger width). DONE
     -- Uses a rg.Line method to get the midpoint (center) of the
-         thicker rg.Line.
+         thicker rg.Line. DONE
     -- Then prints (on the console, on SEPARATE lines):
-         -- the midpoint itself
-         -- the x-coordinate of the midpoint
-         -- the y-coordinate of the midpoint
+         -- the midpoint itself DONE
+         -- the x-coordinate of the midpoint DONE
+         -- the y-coordinate of the midpoint DONE
 
        Here is an example of the output on the console, if the two
        endpoints of the thicker line are at (100, 100) and (121, 200):
@@ -157,8 +158,37 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
+
+    window = rg.RoseWindow(1000,1000)
+    point1 = rg.Point(150, 200)
+    point2 = rg.Point(300, 400)
+    point3 = rg.Point(0, 0)
+    point4 = rg.Point(700, 800)
+
+    midpointx = (700 - 0)/2
+    midpointy = (800 - 0)/2
+
+
+    line1 = rg.Line(point1, point2)
+    line2 = rg.Line(point3, point4)
+
+    line2.thickness = 10
+
+    line1.attach_to(window)
+    line2.attach_to(window)
+
+    midpoint = line2.get_midpoint()
+
+    print(midpoint)
+    print(midpointx)
+    print(midpointy)
+
+
+    window.render()
+    window.close_on_mouse_click()
+
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
 
 
