@@ -241,14 +241,14 @@ def try_methods_and_functions():
          Draw 8 squares whose size (width and height) are 300, DONE
          each "twisted" from the previous by 60 degrees. DONE
 
-      5. Changes its Pen to be a NEW Pen whose color is 'black'
+      5. Changes its Pen to be a NEW Pen whose color is 'black' DONE
          and whose thickness is 3.
 
-      6. Goes backward  200 units.
+      6. Goes backward  200 units. DONE
 
-      7. Draw a CIRCLE whose radius is 30.
+      7. Draw a CIRCLE whose radius is 30. DONE
 
-      8. Draw a SQUARE whose sides are each of length 50.
+      8. Draw a SQUARE whose sides are each of length 50. DONE
     """
 
     justin = rg.SimpleTurtle()
@@ -268,10 +268,17 @@ def try_methods_and_functions():
     justin.pen = rg.Pen('red', 35)
     draw_many_squares(justin, 8, 300, 60)
 
+    justin.pen = rg.Pen('black', 3)
+    justin.backward(200)
+
+    justin.draw_circle(30)
+
+    justin.draw_square(50)
+
 
 
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
