@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and TYLER TOWNSEND.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 #   For objects that are CONSTRUCTED, we use the DOT notation
@@ -71,6 +71,7 @@ def main():
     """
     window = rg.TurtleWindow()
 
+    try_methods_and_functions()
     # Make the animation go much faster.
     #   First number:  bigger means faster.
     #   Second number: bigger means slower.
@@ -82,6 +83,9 @@ def main():
     turtle3()
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
+
+    try_methods()
+    try_functions()
 
 
     window.close_on_mouse_click()
@@ -171,8 +175,18 @@ def try_methods():
       -- forward    50 units
       -- backward  100 units
     """
+
+    sam = rg.SimpleTurtle('turtle')
+    sam.pen = rg.Pen('brown', 5)
+
+    sam.forward(150)
+    sam.left(90)
+    sam.forward(50)
+    sam.backward(100)
+
+
     ####################################################################
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).
     ####################################################################
@@ -185,8 +199,13 @@ def try_functions():
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
+
+    jump_and_move_turtle(200,100,300,30)
+    jump_and_move_turtle(100,200,0,0)
+    jump_and_move_turtle(-50,50,100,100)
+
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -201,26 +220,26 @@ def try_functions():
 
 def try_methods_and_functions():
     """
-    Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
-    that is 'blue' with thickness 5.
+    Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen DONE
+    that is 'blue' with thickness 5. DONE
 
     Then makes the SimpleTurtle do the following (in the order listed):
 
-      1. Go  backward  150 units.
+      1. Go  backward  150 units. DONE
 
-      2. Change its speed to 1 (slowest).
-         Draw 2 squares whose size (width and height) are 100,
-         each "twisted" from the previous by 30 degrees.
+      2. Change its speed to 1 (slowest). DONE
+         Draw 2 squares whose size (width and height) are 100, DONE
+         each "twisted" from the previous by 30 degrees. DONE
 
-      3. Change its speed to 5 (faster).
-         Change its Pen's color to 'red'.
-         Draw 10 squares whose size (width and height) are 50,
-         each "twisted" from the previous by 15 degrees.
+      3. Change its speed to 5 (faster). DONE
+         Change its Pen's color to 'red'. DONE
+         Draw 10 squares whose size (width and height) are 50, DONE
+         each "twisted" from the previous by 15 degrees. DONE
 
-      4. Change its speed to 100 (about the fastest possible).
-         Change its Pen's thickness to 35.
-         Draw 8 squares whose size (width and height) are 300,
-         each "twisted" from the previous by 60 degrees.
+      4. Change its speed to 100 (about the fastest possible).DONE
+         Change its Pen's thickness to 35. DONE
+         Draw 8 squares whose size (width and height) are 300, DONE
+         each "twisted" from the previous by 60 degrees. DONE
 
       5. Changes its Pen to be a NEW Pen whose color is 'black'
          and whose thickness is 3.
@@ -231,6 +250,26 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+
+    justin = rg.SimpleTurtle()
+    justin.pen = rg.Pen('blue', 5)
+
+    justin.backward(150)
+    justin.speed = 1
+
+    draw_many_squares(justin,2,100,30)
+
+    justin.speed = 5
+
+    justin.pen = rg.Pen('red', 5)
+    draw_many_squares(justin,10,50,15)
+
+    justin.speed = 100
+    justin.pen = rg.Pen('red', 35)
+    draw_many_squares(justin, 8, 300, 60)
+
+
+
     ####################################################################
     # TODO: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
