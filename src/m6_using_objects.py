@@ -165,10 +165,6 @@ def lines():
     point3 = rg.Point(0, 0)
     point4 = rg.Point(700, 800)
 
-    midpointx = (700 - 0)/2
-    midpointy = (800 - 0)/2
-
-
     line1 = rg.Line(point1, point2)
     line2 = rg.Line(point3, point4)
 
@@ -180,8 +176,8 @@ def lines():
     midpoint = line2.get_midpoint()
 
     print(midpoint)
-    print(midpointx)
-    print(midpointy)
+    print(midpoint.x)
+    print(midpoint.y)
 
 
     window.render()
